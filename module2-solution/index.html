@@ -1,26 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Our Menu</title>
-  <link rel="stylesheet" href="css/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset some basic styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 2rem 0 1.5rem 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      color: #fff;
+      text-shadow: 1px 2px 8px #d17a22;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .menu-section {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      width: 300px;
+      padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .menu-section:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 12px;
+      color: #fff;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+
+    .chicken-title {
+      background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+    }
+
+    .beef-title {
+      background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
+    }
+
+    .sushi-title {
+      background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    }
+
+    .menu-section p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      color: #555;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .menu-section {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
   <h1>Our Menu</h1>
-  <div class="container">
+  <main class="container">
     <section class="menu-section chicken">
       <div class="section-title chicken-title">Chicken</div>
-      <p>This is some text about chicken. You can write anything here.</p>
+      <p>Succulent chicken dishes, marinated with aromatic spices and grilled to perfection. Try our signature spicy wings or classic roast!</p>
     </section>
     <section class="menu-section beef">
       <div class="section-title beef-title">Beef</div>
-      <p>This is some text about beef. You can write anything here.</p>
+      <p>Premium beef cuts, slow-cooked for tenderness. Enjoy our juicy steaks, gourmet burgers, or hearty beef stew.</p>
     </section>
     <section class="menu-section sushi">
       <div class="section-title sushi-title">Sushi</div>
-      <p>This is some text about sushi. You can write anything here.</p>
+      <p>Freshly rolled sushi with the finest ingredients. Savor our sashimi, maki rolls, and chef’s special platters.</p>
     </section>
-  </div>
+  </main>
 </body>
 </html>
